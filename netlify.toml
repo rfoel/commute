@@ -1,0 +1,4 @@
+[build]
+  functions = "packages/functions/build"
+  publish = "packages/app/build"
+  command = "yarn"

@@ -1,0 +1,6 @@
+export const LEAVE_HOME = 'LEAVE_HOME'
+export const ARRIVE_WORK = 'ARRIVE_WORK'
+export const LUNCH_START = 'LUNCH_START'
+export const LUNCH_END = 'LUNCH_END'
+export const LEAVE_WORK = 'LEAVE_WORK'
+export const ARRIVE_HOME = 'ARRIVE_HOME'

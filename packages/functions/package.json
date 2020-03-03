@@ -1,0 +1,21 @@
+{
+  "name": "functions",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=development netlify-lambda serve src",
+    "build": "netlify-lambda build src",
+    "postinstall": "yarn build"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "^2.10.1",
+    "camelcase": "^5.3.1",
+    "dayjs": "^1.8.21",
+    "graphql": "^14.6.0",
+    "graphql-iso-date": "^3.6.1",
+    "mongoose": "^5.9.2"
+  },
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3"
+  }
+}
