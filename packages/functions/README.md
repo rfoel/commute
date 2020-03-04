@@ -1,11 +1,9 @@
-# `functions`
+# functions
 
-> TODO: description
+## `graphql`
 
-## Usage
+Enpoint for querying GraphQL data from Commute server.
 
-```
-const functions = require('functions');
+## `webhook`
 
-// TODO: DEMONSTRATE API
-```
+Webhook that listen to events like leave home and leave work.

@@ -4,26 +4,26 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'packages/app/**'
-      - 'packages/functions/**'
 
 jobs:
   bump:
     name: bump
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - name: Configure CI Git User
         run: |
-          git remote set-url origin https://${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          git checkout master
           git config --global user.email rafaelfr@outlook.com
           git config --global user.name Rafael Franco
-      - name: Install dependencies
-        run: yarn
-      - name: bump
-        run: |
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: yarn
+      - run: |
+          GH_TOKEN=${GH_TOKEN}
           yarn lerna version --yes
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
