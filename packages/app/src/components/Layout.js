@@ -1,6 +1,6 @@
 import React from 'react'
 import { node } from 'prop-types'
-import styled, { css, layout } from '@1e3/ui'
+import styled, { css } from '@1e3/ui'
 
 import GlobalStyle from './GlobalStyle'
 
